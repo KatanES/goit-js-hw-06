@@ -13,12 +13,21 @@ const images = [
   },
 ];
 
-const gallery = document.querySelector('.gallery');
+// const gallery = document.querySelector('.gallery');
 // console.dir(gallery);
-const markup = images.map(({ img }) => {
-  const markup = `<li>
-  <img src=${url} alt=${alt}>
-  </li>`;
-  gallery.insertAdjacentHTML('beforeend', markup);
-});
-console.dir(gallery);
+// const markup = images.map(img => {
+//   `<li>
+//   <img src=${url} alt=${alt}>
+//   </li>`;
+//   gallery.insertAdjacentHTML('beforeend', markup);
+// });
+// // console.log(gallery);
+
+const makeGalleryCard = ({ url, alt }) =>
+  `<li class="gallery-item"><a href="#"><img src="${url}" alt="${alt}"</a></li>`;
+
+const markup = images.map(el => makeGalleryCard(el));
+console.log(markup);
+
+const gallery = document.querySelector('.gallery');
+gallery.insertAdjacentHTML('beforeend', markup.join(''));
