@@ -15,5 +15,11 @@ function onSubmit(evt) {
     email: email.value,
     password: password.value,
   };
+
+  if (email.value === '' || password.value === '') {
+    alert('Будь ласка, заповніть всі поля');
+  }
+
   console.log(data);
+  formEl.reset();
 }
