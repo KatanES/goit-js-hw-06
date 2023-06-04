@@ -9,7 +9,6 @@
 // console.log(listDynamic);
 
 const list = document.querySelector('#categories');
-// console.dir(list);
 
 const items = list.querySelectorAll('li.item');
 console.log('Number of categories:', items.length);
