@@ -24,7 +24,7 @@ const images = [
 // // console.log(gallery);
 
 const makeGalleryCard = ({ url, alt }) =>
-  `<li class="gallery-item"><a href="#"><img src="${url}" alt="${alt}"</a></li>`;
+  `<li class="gallery-item"><a href="#"><img src="${url}" alt="${alt}" width = "300px"</a></li>`;
 
 const markup = images.map(el => makeGalleryCard(el));
 console.log(markup);
